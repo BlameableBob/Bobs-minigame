@@ -53,17 +53,16 @@ public class Main {
                 
             }
              //Print current player
-            System.out.println("Huidige speler: " + currentPlayer);
+            System.out.println("Huidige speler: " + currentPlayer.getName());
              //Get chosen field
              //Change field to current player pawn (X or O)
             chosenField = input.nextInt();
-            field[chosenField -1] = 'x';
+            field[chosenField -1] = currentPlayer.getToken();
             //proberen switchen tussen spelers
             if(player1.equals(currentPlayer))
             {
                 currentPlayer = player2;
                 
-                field[(chosenField -1)] = 'o';
             }
             else
             {
